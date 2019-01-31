@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Header() {
+function HeaderContainer() {
     return (
         <header className="header-wrapper">
             <div className="title-wrapper">
@@ -12,4 +12,4 @@ function Header() {
     );
 }
 
-export default Header;
+export default HeaderContainer;

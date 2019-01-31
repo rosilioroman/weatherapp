@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
-import Header from './components/HeaderComponents/HeaderContainer';
-import UserInput from './components/InputComponents/UserInputContainer'
+import HeaderContainer from './components/HeaderComponents/HeaderContainer';
+import UserInputContainer from './components/InputComponents/UserInputContainer'
 
 import './normalize.css'
 
@@ -13,11 +13,17 @@ class App extends Component {
       country: ''
     }
   }
+
+  //dynamic onChange handler
+  inputChangeHandler = event => {
+    this.setState({ [event.target.name]: event.target.value })
+  }
+  
   render() {
     return (
       <div className="App">
-        <Header />
-        <UserInput />
+        <HeaderContainer />
+        <UserInputContainer inputChangeHandler={this.inputChangeHandler} />
       </div>
     );
   }
