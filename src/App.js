@@ -8,7 +8,7 @@ import UserInputContainer from './components/InputComponents/UserInputContainer'
 
 import './normalize.css'
 
-//key needed to make API calls
+// Unique key for OpenWeatherMap API
 const api_key = 'f437458d284235b298383bdc10a5b3a8';
 
 class App extends Component {
