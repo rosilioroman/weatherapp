@@ -20,14 +20,19 @@ class App extends Component {
   }
 
   getWeather = (cityName, country, history) => {
-    let countryCode = country.toLowerCase();
-    
-    axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${cityName},${countryCode}&units=imperial&appid=${api_key}`)
-    .then(response => {
-      this.setState({ weather: response.data })
-      history.push("/results"); //navigate browser to /results
-    })
-    .catch(err => console.log(err));
+
+    if(cityName && country) {
+      let countryCode = country.toLowerCase();
+      
+      axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${cityName},${countryCode}&units=imperial&appid=${api_key}`)
+      .then(response => {
+        this.setState({ weather: response.data })
+        history.push("/results"); //navigate browser to /results
+      })
+      .catch(err => console.log(err));
+    } else {
+      alert('Fill out all the fields please!');
+    }
   }
   
   render() {
