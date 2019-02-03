@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './UserInput.css';
 
 class UserInputContainer extends Component {
     constructor(props) {
@@ -24,19 +25,19 @@ class UserInputContainer extends Component {
             <form className="user-input-wrapper" onSubmit={this.getWeather}>
                 <input 
                     type="text" 
-                    placeholder="city" 
+                    placeholder="city..." 
                     name="city"
                     className="user-input-field"
                     onChange={this.inputChangeHandler}
                 />
                 <input 
                     type="text" 
-                    placeholder="country" 
+                    placeholder="country..." 
                     name="country"
                     className="user-input-field"
                     onChange={this.inputChangeHandler}
                 />
-                <button type="submit">Get Weather</button>
+                <button type="submit" className="input-btn">Get Weather</button>
             </form>
         );
     }

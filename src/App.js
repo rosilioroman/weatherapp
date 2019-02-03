@@ -6,7 +6,7 @@ import HeaderContainer from './components/HeaderComponents/HeaderContainer';
 import Results from './components/ContentComponents/Results';
 import UserInputContainer from './components/InputComponents/UserInputContainer'
 
-import './normalize.css'
+import './App.css';
 
 // Unique key for OpenWeatherMap API
 const api_key = 'f437458d284235b298383bdc10a5b3a8';
@@ -22,7 +22,7 @@ class App extends Component {
   getWeather = (cityName, country, history) => {
     let countryCode = country.toLowerCase();
     
-    axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${cityName},${countryCode}&appid=${api_key}`)
+    axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${cityName},${countryCode}&units=imperial&appid=${api_key}`)
     .then(response => {
       this.setState({ weather: response.data })
       history.push("/results"); //navigate browser to /results
