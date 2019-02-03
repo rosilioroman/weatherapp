@@ -1,0 +1,37 @@
+.user-input-wrapper {
+    padding-left: 3%;
+    width: 50%;
+}
+
+.user-input-field {
+    width: 20%;
+    margin-right: 5px;
+    padding: 4px;
+    border: none;
+    border-bottom: 2px solid #FC4445;
+    background: transparent;
+    font-size: 1.8rem;
+}
+
+.user-input-field:focus  {
+    outline: none;
+}
+
+.user-input-field::placeholder {
+    color: black;
+}
+
+.input-btn {
+    font-family: 'Roboto Slab', serif;
+    font-weight: bold;
+    width: 15%;
+    height: 30px;
+    border: 2px solid #FC4445;
+    border-radius: 4px;
+    background-color: transparent;
+}
+
+.input-btn:hover {
+    cursor: pointer;
+    background-color: #55BCC9;
+}

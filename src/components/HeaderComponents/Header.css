@@ -1,0 +1,23 @@
+.header-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    border-right: 2px solid black;
+    padding-right: 3%;
+    width: 50%;
+}
+
+.title-wrapper h1 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 4rem;
+}
+
+.ro-link {
+    font-size: 1.5rem;
+    text-decoration: underline #FC4445;
+}
+
+.subtitle {
+    font-style: italic;
+}
