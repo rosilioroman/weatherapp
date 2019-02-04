@@ -10,7 +10,11 @@ import './App.css';
 
 
 //key
-const api_key = `${process.env.REACT_APP_API_KEY}`;
+var api_key = `${process.env.REACT_APP_API_KEY}`;
+
+if(typeof api_key === 'undefined') {
+  api_key = `${process.env.WEATHER_API_KEY}`;
+}
 
 class App extends Component {
   constructor() {
