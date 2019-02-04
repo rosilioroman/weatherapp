@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import './Results.css';
 
 function Results(props) {
-    console.log(props.weather);
     if(typeof props.weather.main === 'undefined') {
         return (
             <div className="results-container">
@@ -17,10 +16,10 @@ function Results(props) {
             <h4>Location: {props.weather.name}, {props.weather.sys.country}</h4>
             <ul>
                 <li>
-                    Temperature: {Math.round(props.weather.main.temp)} &#8457; / {farenheitConverter(props.weather.main.temp)} &#8451;
+                    Temperature: {Math.round(props.weather.main.temp)}&#8457; / {farenheitConverter(props.weather.main.temp)}&#8451;
                 </li>
                 <li>
-                    Humidity: {props.weather.main.humidity} %
+                    Humidity: {props.weather.main.humidity}%
                 </li>
                 <li>
                     Clouds: {cloudStatus(props.weather.clouds.all)}

@@ -8,8 +8,13 @@ import UserInputContainer from './components/InputComponents/UserInputContainer'
 
 import './App.css';
 
-// Unique key for OpenWeatherMap API
-const api_key = 'f437458d284235b298383bdc10a5b3a8';
+
+//key
+var api_key = `${process.env.REACT_APP_API_KEY}`;
+
+if(typeof api_key === 'undefined') {
+  api_key = `${process.env.WEATHER_API_KEY}`;
+}
 
 class App extends Component {
   constructor() {
