@@ -24,6 +24,7 @@
 .input-btn {
     font-family: 'Roboto Slab', serif;
     font-weight: bold;
+    font-size: 1.5rem;
     width: 15%;
     height: 30px;
     border: 2px solid #FC4445;
